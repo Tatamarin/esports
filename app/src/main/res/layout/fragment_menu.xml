@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center_horizontal" android:orientation="vertical" android:paddingLeft="7dp" android:paddingTop="12dp" android:paddingRight="7dp" android:paddingBottom="12dp">
+    <TextView android:id="@+id/menu_profile" style="@style/MenuItem" android:drawableTop="@android:drawable/ic_menu_myplaces" android:text="@string/menu_profile" />
+    <TextView android:id="@+id/menu_gallery" style="@style/MenuItem" android:drawableTop="@android:drawable/ic_menu_gallery" android:text="@string/menu_gallery" />
+    <TextView android:id="@+id/menu_video" style="@style/MenuItem" android:drawableTop="@android:drawable/ic_media_play" android:text="@string/menu_video" />
+    <TextView android:id="@+id/menu_web" style="@style/MenuItem" android:drawableTop="@android:drawable/ic_menu_view" android:text="@string/menu_web" />
+    <TextView android:id="@+id/menu_actions" style="@style/MenuItem" android:drawableTop="@android:drawable/ic_input_add" android:text="@string/menu_actions" />
+    <Space android:layout_width="1dp" android:layout_height="0dp" android:layout_weight="1" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="@string/online_status" android:textColor="@color/green" android:textSize="11sp" />
+</LinearLayout>

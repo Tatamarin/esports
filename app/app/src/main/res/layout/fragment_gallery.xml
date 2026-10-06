@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+        <TextView style="@style/SectionTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/gallery_title" />
+        <TextView style="@style/BodyText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/gallery_hint" />
+        <LinearLayout android:id="@+id/gallery_final" style="@style/GalleryCard">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:contentDescription="@string/gallery_final_title"
+                android:scaleType="centerCrop"
+                android:src="@drawable/gallery_valorant_roster" />
+            <TextView style="@style/GalleryTitle" android:text="@string/gallery_final_title" />
+            <TextView style="@style/GallerySubtitle" android:text="@string/gallery_final_subtitle" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/gallery_lan" style="@style/GalleryCard">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:contentDescription="@string/gallery_lan_title"
+                android:scaleType="centerCrop"
+                android:src="@drawable/gallery_lol_booth" />
+            <TextView style="@style/GalleryTitle" android:text="@string/gallery_lan_title" />
+            <TextView style="@style/GallerySubtitle" android:text="@string/gallery_lan_subtitle" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/gallery_masters" style="@style/GalleryCard">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:contentDescription="@string/gallery_masters_title"
+                android:scaleType="centerCrop"
+                android:src="@drawable/gallery_valorant_champions" />
+            <TextView style="@style/GalleryTitle" android:text="@string/gallery_masters_title" />
+            <TextView style="@style/GallerySubtitle" android:text="@string/gallery_masters_subtitle" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

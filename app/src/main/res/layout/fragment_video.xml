@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+        <TextView style="@style/SectionTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/video_title" />
+        <TextView style="@style/BodyText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/video_description" />
+
+        <FrameLayout android:layout_width="match_parent" android:layout_height="230dp" android:layout_marginTop="14dp" android:background="@drawable/bg_bracket_final">
+            <VideoView android:id="@+id/video_view" android:layout_width="match_parent" android:layout_height="match_parent" />
+            <TextView style="@style/SmallBadge" android:layout_gravity="top|start" android:layout_margin="12dp" android:background="@drawable/bg_badge_red" android:text="@string/video_live" android:textColor="#E11D48" />
+            <TextView style="@style/SmallBadge" android:layout_gravity="top|end" android:layout_margin="12dp" android:background="@color/navy" android:text="@string/video_quality" android:textColor="@color/white" />
+            <ProgressBar android:id="@+id/video_progress" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:visibility="gone" />
+            <Button android:id="@+id/video_load" android:layout_width="wrap_content" android:layout_height="48dp" android:layout_gravity="center" android:background="@drawable/bg_primary_button" android:minWidth="0dp" android:paddingStart="18dp" android:paddingEnd="18dp" android:text="@string/video_load" android:textAllCaps="false" android:textColor="@color/white" android:textStyle="bold" />
+        </FrameLayout>
+        <TextView android:id="@+id/video_status" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:gravity="center" android:text="@string/video_waiting" android:textColor="@color/text_secondary" android:textSize="11sp" />
+
+        <LinearLayout style="@style/DashboardCard" android:layout_marginTop="10dp" android:background="@drawable/bg_badge_blue" android:padding="14dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/video_match_title" android:textColor="@color/text_primary" android:textSize="16sp" android:textStyle="bold" />
+            <TextView style="@style/BodyText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/video_match_description" />
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="10dp" android:background="@color/divider" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="9dp" android:gravity="center_vertical" android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/video_casters" android:textColor="@color/text_secondary" android:textSize="11sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/video_viewers" android:textColor="@color/blue" android:textSize="11sp" android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:gravity="center_vertical" android:orientation="horizontal">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/video_clips" android:textColor="@color/text_primary" android:textStyle="bold" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/video_all" android:textColor="@color/blue" android:textSize="11sp" android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/video_clip_one" style="@style/RecentEventCard">
+            <TextView android:layout_width="46dp" android:layout_height="46dp" android:background="@drawable/bg_primary_button" android:gravity="center" android:text="◉" android:textColor="@color/white" android:textSize="18sp" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:layout_weight="1" android:orientation="vertical">
+                <TextView style="@style/RecentEventTitle" android:text="@string/video_clip_one" />
+                <TextView style="@style/RecentEventSubtitle" android:text="@string/video_clip_one_meta" />
+            </LinearLayout>
+            <TextView android:layout_width="24dp" android:layout_height="match_parent" android:gravity="center" android:text="▶" android:textColor="@color/text_secondary" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/video_clip_two" style="@style/RecentEventCard">
+            <TextView android:layout_width="46dp" android:layout_height="46dp" android:background="@drawable/bg_badge_yellow" android:gravity="center" android:text="⚡" android:textColor="#D97706" android:textSize="18sp" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:layout_weight="1" android:orientation="vertical">
+                <TextView style="@style/RecentEventTitle" android:text="@string/video_clip_two" />
+                <TextView style="@style/RecentEventSubtitle" android:text="@string/video_clip_two_meta" />
+            </LinearLayout>
+            <TextView android:layout_width="24dp" android:layout_height="match_parent" android:gravity="center" android:text="▶" android:textColor="@color/text_secondary" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

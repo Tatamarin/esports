@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+        <TextView style="@style/SectionTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/gallery_title" />
+        <TextView style="@style/BodyText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/gallery_hint" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gallery_recent_title"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/gallery_recent_subtitle"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edit_button"
+                android:paddingStart="12dp"
+                android:paddingTop="7dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="7dp"
+                android:text="@string/gallery_recent_count"
+                android:textColor="@color/blue"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/recent_masters" style="@style/RecentEventCard">
+            <ImageView
+                style="@style/RecentEventIcon"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_trophy" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView style="@style/RecentEventTitle" android:text="@string/recent_masters_title" />
+                <TextView style="@style/RecentEventSubtitle" android:text="@string/recent_masters_subtitle" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:importantForAccessibility="no"
+                android:text="@string/chevron_right"
+                android:textColor="@color/text_secondary"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/recent_lan" style="@style/RecentEventCard">
+            <ImageView
+                style="@style/RecentEventIcon"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_monitor" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView style="@style/RecentEventTitle" android:text="@string/recent_lan_title" />
+                <TextView style="@style/RecentEventSubtitle" android:text="@string/recent_lan_subtitle" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:importantForAccessibility="no"
+                android:text="@string/chevron_right"
+                android:textColor="@color/text_secondary"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/recent_final" style="@style/RecentEventCard">
+            <ImageView
+                style="@style/RecentEventIcon"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_bolt" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView style="@style/RecentEventTitle" android:text="@string/recent_final_title" />
+                <TextView style="@style/RecentEventSubtitle" android:text="@string/recent_final_subtitle" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:importantForAccessibility="no"
+                android:text="@string/chevron_right"
+                android:textColor="@color/text_secondary"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/gallery_featured_title"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout android:id="@+id/gallery_final" style="@style/GalleryCard">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:contentDescription="@string/gallery_final_title"
+                android:scaleType="centerCrop"
+                android:src="@drawable/gallery_valorant_roster" />
+            <TextView style="@style/GalleryTitle" android:text="@string/gallery_final_title" />
+            <TextView style="@style/GallerySubtitle" android:text="@string/gallery_final_subtitle" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/gallery_lan" style="@style/GalleryCard">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:contentDescription="@string/gallery_lan_title"
+                android:scaleType="centerCrop"
+                android:src="@drawable/gallery_lol_booth" />
+            <TextView style="@style/GalleryTitle" android:text="@string/gallery_lan_title" />
+            <TextView style="@style/GallerySubtitle" android:text="@string/gallery_lan_subtitle" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/gallery_masters" style="@style/GalleryCard">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:contentDescription="@string/gallery_masters_title"
+                android:scaleType="centerCrop"
+                android:src="@drawable/gallery_valorant_champions" />
+            <TextView style="@style/GalleryTitle" android:text="@string/gallery_masters_title" />
+            <TextView style="@style/GallerySubtitle" android:text="@string/gallery_masters_subtitle" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="navy">#081A3A</color>
+    <color name="blue">#2563EB</color>
+    <color name="blue_dark">#1D4ED8</color>
+    <color name="blue_light">#EAF1FF</color>
+    <color name="cyan_light">#E8FBFF</color>
+    <color name="green">#10B981</color>
+    <color name="text_primary">#14213D</color>
+    <color name="text_secondary">#667085</color>
+    <color name="divider">#E5EAF2</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="background">#F7F9FC</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

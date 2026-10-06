@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+            <TextView style="@style/SectionTitle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/profile_title" />
+            <TextView style="@style/SmallBadge" android:background="@drawable/bg_badge_blue" android:text="@string/profile_official" android:textColor="@color/blue" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/DashboardCard" android:layout_marginTop="14dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+                <ImageView android:id="@+id/profile_image" android:layout_width="78dp" android:layout_height="78dp" android:background="@drawable/bg_avatar" android:contentDescription="@string/profile_name" android:outlineProvider="background" android:scaleType="centerCrop" android:src="@drawable/esports_profile_avatar" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="14dp" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/profile_name" android:textColor="@color/text_primary" android:textSize="15sp" android:textStyle="bold" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/profile_role" android:textColor="@color/blue" android:textSize="12sp" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="@string/profile_id" android:textColor="@color/text_secondary" android:textSize="10sp" android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:orientation="horizontal">
+                <Button android:id="@+id/edit_profile_image" android:layout_width="0dp" android:layout_height="38dp" android:layout_weight="1" android:background="@drawable/bg_edit_button" android:minWidth="0dp" android:text="@string/change_profile_image" android:textAllCaps="false" android:textColor="@color/blue" android:textSize="11sp" android:textStyle="bold" />
+                <TextView android:id="@+id/restore_profile_image" android:layout_width="wrap_content" android:layout_height="38dp" android:layout_marginStart="8dp" android:gravity="center" android:paddingStart="8dp" android:paddingEnd="8dp" android:text="@string/restore_default_image" android:textColor="@color/text_secondary" android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/DashboardCard" android:layout_marginTop="10dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/profile_summary_title" android:textColor="@color/blue" android:textStyle="bold" />
+            <TextView style="@style/BodyText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="@string/profile_summary" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:baselineAligned="false" android:orientation="horizontal">
+            <LinearLayout android:layout_width="0dp" android:layout_height="112dp" android:layout_marginEnd="5dp" android:layout_weight="1" android:background="@drawable/bg_card" android:gravity="center" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🕹️" android:textSize="24sp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:gravity="center" android:text="@string/profile_collection" android:textColor="@color/text_primary" android:textStyle="bold" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="@string/profile_collection_value" android:textColor="@color/blue" android:textSize="11sp" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="112dp" android:layout_marginStart="5dp" android:layout_weight="1" android:background="@drawable/bg_card" android:gravity="center" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🏅" android:textSize="24sp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:gravity="center" android:text="@string/profile_winrate" android:textColor="@color/text_primary" android:textStyle="bold" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="@string/profile_winrate_value" android:textColor="@color/green" android:textSize="11sp" android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/DashboardCard" android:layout_marginTop="10dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/profile_biography" android:textColor="@color/text_secondary" android:textSize="11sp" android:textStyle="bold" />
+                <Button android:id="@+id/edit_experience" android:layout_width="wrap_content" android:layout_height="36dp" android:background="@drawable/bg_edit_button" android:minWidth="0dp" android:paddingStart="12dp" android:paddingEnd="12dp" android:text="@string/edit" android:textAllCaps="false" android:textColor="@color/blue" android:textStyle="bold" />
+            </LinearLayout>
+            <TextView android:id="@+id/profile_experience" style="@style/BodyText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/profile_bio" />
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="14dp" android:background="@color/divider" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/profile_attributions" android:textColor="@color/text_secondary" android:textSize="11sp" android:textStyle="bold" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:background="@drawable/bg_edit_button" android:padding="10dp" android:text="@string/profile_attributions_value" android:textColor="@color/text_secondary" android:textSize="11sp" />
+            <Button style="@style/PrimaryButton" android:layout_width="match_parent" android:layout_height="46dp" android:layout_marginTop="14dp" android:text="@string/profile_active_roster" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

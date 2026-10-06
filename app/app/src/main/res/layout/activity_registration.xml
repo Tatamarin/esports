@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/bg_header"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="16dp">
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/back"
+            android:src="@android:drawable/ic_media_previous"
+            android:tint="@color/white" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/registration_title"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <Space android:layout_width="48dp" android:layout_height="1dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView style="@style/SectionTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/registration_title" />
+            <TextView style="@style/BodyText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="@string/registration_subtitle" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:background="@drawable/bg_success_banner" android:text="@string/registration_available" android:textColor="@color/green" android:textSize="12sp" android:textStyle="bold" />
+            <TextView android:id="@+id/registration_saved_notice" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:background="@drawable/bg_edit_button" android:padding="12dp" android:text="@string/registration_saved_notice" android:textColor="@color/blue" android:textSize="12sp" android:visibility="gone" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:background="@drawable/bg_card" android:orientation="vertical">
+                <TextView style="@style/FormLabel" android:text="@string/registration_team_label" />
+                <EditText android:id="@+id/registration_team" style="@style/FormInput" android:hint="@string/registration_team_hint" android:inputType="textCapWords" />
+                <TextView style="@style/FormLabel" android:layout_marginTop="16dp" android:text="@string/registration_captain_label" />
+                <EditText android:id="@+id/registration_captain" style="@style/FormInput" android:hint="@string/registration_captain_hint" android:inputType="textCapWords|textPersonName" />
+                <TextView style="@style/FormLabel" android:layout_marginTop="16dp" android:text="@string/registration_email_label" />
+                <EditText android:id="@+id/registration_email" style="@style/FormInput" android:autofillHints="emailAddress" android:hint="@string/registration_email_hint" android:inputType="textEmailAddress" />
+                <TextView style="@style/FormLabel" android:layout_marginTop="16dp" android:text="@string/registration_game_label" />
+                <Spinner android:id="@+id/registration_game" android:layout_width="match_parent" android:layout_height="52dp" android:background="@drawable/bg_input" android:paddingStart="10dp" android:paddingEnd="10dp" />
+                <TextView style="@style/FormLabel" android:layout_marginTop="16dp" android:text="@string/registration_roster_label" />
+                <EditText android:id="@+id/registration_roster" style="@style/FormInput" android:gravity="top|start" android:hint="@string/registration_roster_hint" android:inputType="textMultiLine|textCapSentences" android:minLines="3" />
+                <CheckBox android:id="@+id/registration_rules" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:buttonTint="@color/blue" android:text="@string/registration_rules" android:textColor="@color/text_secondary" android:textSize="13sp" />
+            </LinearLayout>
+
+            <Button android:id="@+id/registration_submit" style="@style/PrimaryButton" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="18dp" android:text="@string/registration_submit" />
+            <Button android:id="@+id/registration_cancel" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="8dp" android:background="@android:color/transparent" android:text="@string/cancel" android:textAllCaps="false" android:textColor="@color/text_secondary" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

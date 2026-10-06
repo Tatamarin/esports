@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="14dp">
+    <TextView style="@style/SectionTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/web_title" />
+    <LinearLayout style="@style/DashboardCard" android:layout_marginTop="12dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/web_label" android:textColor="@color/text_secondary" android:textSize="11sp" android:textStyle="bold" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:orientation="horizontal">
+            <EditText android:id="@+id/web_url" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:background="@drawable/bg_input" android:hint="@string/web_hint" android:importantForAutofill="no" android:inputType="textUri" android:maxLines="1" android:text="@string/web_default_url" android:textColor="@color/text_primary" android:textSize="12sp" />
+            <Button android:id="@+id/web_go" style="@style/PrimaryButton" android:layout_width="52dp" android:layout_height="48dp" android:layout_marginStart="8dp" android:minWidth="0dp" android:text="@string/web_go" />
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:background="@drawable/bg_badge_green" android:paddingStart="8dp" android:paddingTop="4dp" android:paddingEnd="8dp" android:paddingBottom="4dp" android:text="@string/web_valid" android:textColor="@color/green" android:textSize="10sp" android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/web_quick_access" android:textColor="@color/text_secondary" android:textSize="11sp" android:textStyle="bold" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:orientation="horizontal">
+        <Button android:id="@+id/web_quick_rules" android:layout_width="0dp" android:layout_height="38dp" android:layout_marginEnd="4dp" android:layout_weight="1" android:background="@drawable/bg_badge_blue" android:minWidth="0dp" android:text="@string/web_quick_rules" android:textAllCaps="false" android:textColor="@color/blue" android:textSize="10sp" />
+        <Button android:id="@+id/web_quick_news" android:layout_width="0dp" android:layout_height="38dp" android:layout_marginStart="4dp" android:layout_weight="1" android:background="@drawable/bg_badge_blue" android:minWidth="0dp" android:text="@string/web_quick_news" android:textAllCaps="false" android:textColor="@color/blue" android:textSize="10sp" />
+    </LinearLayout>
+
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="10dp" android:layout_weight="1" android:background="@drawable/bg_card">
+        <WebView android:id="@+id/web_view" android:layout_width="match_parent" android:layout_height="match_parent" />
+        <ProgressBar android:id="@+id/web_progress" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="4dp" android:layout_gravity="top" android:indeterminate="true" android:visibility="gone" />
+    </FrameLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="8dp" android:gravity="center_vertical" android:orientation="horizontal">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/web_online" android:textColor="@color/text_primary" android:textSize="11sp" android:textStyle="bold" />
+        <Button android:id="@+id/web_external" android:layout_width="wrap_content" android:layout_height="40dp" android:background="@drawable/bg_badge_blue" android:minWidth="0dp" android:text="@string/web_external" android:textAllCaps="false" android:textColor="@color/blue" android:textSize="10sp" />
+    </LinearLayout>
+</LinearLayout>
